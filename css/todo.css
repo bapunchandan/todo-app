@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('../fonts/GreatVibes-Regular.ttf');
+}
+
+.header {
+  font-family: 'Great Vibes', cursive;
+}
+
+.footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
