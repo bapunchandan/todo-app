@@ -13,3 +13,6 @@
   bottom: 0;
   width: 100%;
 }
+.complete {
+  text-decoration: line-through;
+}
