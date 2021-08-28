@@ -5,10 +5,9 @@ function init() {
 }
 
 function handleAddButton() {
-  if (! document.getElementById('add-task-form').reportValidity()) {
+  if (!document.getElementById('add-task-form').reportValidity()) {
     return;
   }
-
   const taskInputElement = document.getElementById('task');
   const task = taskInputElement.value;
   taskInputElement.value = '';
@@ -21,11 +20,11 @@ function handleAddButton() {
   const tasksElement = document.getElementById('tasks');
   tasksElement.appendChild(taskElement);
   taskNo++;
-  taskElement.onclick = handleCheckButton;
+  taskElement.firstElementChild.onclick = handleCheckButton;
 }
 
 function handleCheckButton() {
-  this.lastElementChild.classList.toggle('complete');
+  let labelElement = document.querySelector('label[for="' + this.id + '"]')
+  labelElement.classList.toggle('complete');
 }
-
 window.onload = init;
